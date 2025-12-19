@@ -31,8 +31,8 @@ export default function Welcome() {
       <header className="page-header">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center gap-3 mb-2">
-            <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center shadow-md overflow-hidden">
-              <img src="/branding/wellness-escape-logo.png" alt="" className="w-12 h-12 object-contain" />
+            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center shadow-md overflow-hidden">
+              <img src="/branding/wellness-escape-logo.png" alt="" className="w-16 h-16 sm:w-20 sm:h-20 object-contain" />
             </div>
             <div>
               <p className="text-xs uppercase tracking-wide text-muted-foreground">Wellness Escape</p>
@@ -85,7 +85,7 @@ export default function Welcome() {
                 <div>
                   <p className="font-medium flex items-center gap-2">
                     <Flame className="h-4 w-4 text-primary" />
-                    Complete Your Work It Assignment
+                    Complete Your Progressive Assignment
                   </p>
                   <p className="text-sm text-muted-foreground">Weekly action steps and journaling that create real change.</p>
                 </div>

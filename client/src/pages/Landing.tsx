@@ -101,7 +101,7 @@ const Landing = () => {
                 </div>
                 <div className="text-3xl font-bold text-primary">4</div>
                 <p className="text-sm text-muted-foreground">
-                  Work It weekly assignments
+                  Progressive weekly assignments
                 </p>
               </CardContent>
             </Card>

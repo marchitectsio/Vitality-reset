@@ -58,8 +58,8 @@ const ClientDashboard = () => {
       <header className="page-header">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center shadow-md overflow-hidden">
-              <img src="/branding/wellness-escape-logo.png" alt="" className="w-12 h-12 object-contain" />
+            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center shadow-md overflow-hidden">
+              <img src="/branding/wellness-escape-logo.png" alt="" className="w-16 h-16 sm:w-20 sm:h-20 object-contain" />
             </div>
             <div>
               <p className="text-xs uppercase tracking-wide text-muted-foreground">
@@ -153,7 +153,7 @@ const ClientDashboard = () => {
                 <div className="flex items-start gap-3 p-3 rounded-xl bg-white/50">
                   <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-xs shrink-0">2</span>
                   <div>
-                    <p className="font-medium">Complete your Work It assignments</p>
+                    <p className="font-medium">Complete your Progressive Assignments</p>
                     <p className="text-muted-foreground text-xs">These prepare you for coaching calls.</p>
                   </div>
                 </div>
@@ -243,7 +243,7 @@ const ClientDashboard = () => {
             <CardHeader>
               <CardTitle className="flex items-center text-lg gap-2">
                 <Flame className="w-5 h-5 text-primary" />
-                Work It
+                Progressive Assignments
               </CardTitle>
               <CardDescription>
                 Weekly assignments and accountability tracking.
@@ -255,7 +255,7 @@ const ClientDashboard = () => {
               </p>
               <Button asChild variant="outline" className="w-full rounded-xl">
                 <Link href="/work-it">
-                  {hasAccess ? "Open Work It" : "Preview Work It"}
+                  {hasAccess ? "Open Assignments" : "Preview Assignments"}
                 </Link>
               </Button>
             </CardContent>
@@ -290,7 +290,7 @@ const ClientDashboard = () => {
                   Community
                 </CardTitle>
                 <CardDescription>
-                  Connect with other women in this season of life.
+                  Celebrate breakthroughs, navigate challenges, and build friendships that last beyond the reset.
                 </CardDescription>
               </CardHeader>
               <CardContent>

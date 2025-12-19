@@ -91,8 +91,8 @@ export default function WorkIt() {
         <header className="page-header">
           <div className="container mx-auto px-4 py-4">
             <p className="text-xs uppercase tracking-wide text-muted-foreground">Wellness Escape</p>
-            <h1 className="text-2xl font-semibold flex items-center gap-2">
-              <Flame className="h-5 w-5 text-primary" /> Work It
+            <h1 className="text-xl sm:text-2xl font-semibold flex items-center gap-2 flex-wrap">
+              <Flame className="h-5 w-5 text-primary" /> Progressive Assignments
             </h1>
           </div>
         </header>
@@ -104,7 +104,7 @@ export default function WorkIt() {
                 <Lock className="w-8 h-8 text-muted-foreground" />
               </div>
               <div className="space-y-2">
-                <h2 className="text-xl font-semibold">Work It is locked</h2>
+                <h2 className="text-xl font-semibold">Progressive Assignments is locked</h2>
                 <p className="text-muted-foreground max-w-md mx-auto">
                   Purchase Vitality Reset to unlock your weekly assignments, journaling prompts, and accountability tracking.
                 </p>
@@ -136,8 +136,8 @@ export default function WorkIt() {
       <header className="page-header">
         <div className="container mx-auto px-4 py-4">
           <p className="text-xs uppercase tracking-wide text-muted-foreground">Wellness Escape</p>
-          <h1 className="text-2xl font-semibold flex items-center gap-2">
-            <Flame className="h-5 w-5 text-primary" /> Work It
+          <h1 className="text-xl sm:text-2xl font-semibold flex items-center gap-2 flex-wrap">
+            <Flame className="h-5 w-5 text-primary" /> Progressive Assignments
           </h1>
           <p className="text-sm text-muted-foreground mt-1">
             Your weekly assignments and accountability tracker

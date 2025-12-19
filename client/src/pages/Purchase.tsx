@@ -75,7 +75,7 @@ export default function Purchase() {
   const features = [
     { icon: Play, text: "8 video lessons across 4 weeks" },
     { icon: Phone, text: "4 private 30-minute coaching calls" },
-    { icon: Flame, text: "Weekly Work It assignments" },
+    { icon: Flame, text: "Weekly progressive assignments" },
     { icon: Calendar, text: "Calendly scheduling included" },
   ];
 

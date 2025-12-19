@@ -38,24 +38,41 @@ export function handleDatabaseError(error: any, context: string): string {
 
 /**
  * Handles authentication errors specifically
+ * Surfaces server error messages when available
  */
 export function handleAuthError(error: any): string {
   if (import.meta.env.DEV) {
     console.error('Auth error:', error);
   }
 
-  const message = error?.message?.toLowerCase() || '';
+  // Check for server error message first (from response body)
+  const serverMessage = error?.error || error?.message || '';
+  const lowerMessage = serverMessage.toLowerCase();
   
-  if (message.includes('invalid login credentials')) {
+  // Handle specific server messages
+  if (lowerMessage.includes('email already registered') || lowerMessage.includes('already exists')) {
+    return 'An account with this email already exists. Try signing in instead.';
+  }
+  
+  if (lowerMessage.includes('invalid login credentials') || lowerMessage.includes('invalid email or password')) {
     return 'Invalid email or password.';
   }
   
-  if (message.includes('email not confirmed')) {
+  if (lowerMessage.includes('email not confirmed')) {
     return 'Please confirm your email address.';
   }
   
-  if (message.includes('user already registered')) {
-    return 'An account with this email already exists.';
+  if (lowerMessage.includes('user already registered')) {
+    return 'An account with this email already exists. Try signing in instead.';
+  }
+
+  if (lowerMessage.includes('required')) {
+    return serverMessage;
+  }
+  
+  // If server provided a specific message, use it
+  if (serverMessage && serverMessage.length > 0 && serverMessage.length < 100) {
+    return serverMessage;
   }
   
   return 'Authentication failed. Please try again.';

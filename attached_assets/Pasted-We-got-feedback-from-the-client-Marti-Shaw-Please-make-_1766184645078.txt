@@ -1,0 +1,36 @@
+We got feedback from the client (Marti Shaw). Please make these fixes and verify them end to end.
+
+A. Signup bug for marti@gmail.com
+Marti tried signing up with marti@gmail.com and got “Authentication failed”. She was able to sign up with martishaw97@gmail.com.
+1. Determine the real backend error when registering marti@gmail.com (likely already exists in users table, or a validation error).
+2. Improve client side error messaging in client/src/lib/errorHandling.ts so it correctly surfaces server messages like “Email already registered” and suggests signing in instead of the generic “Authentication failed”.
+3. Add a simple demo admin solution so I can get Marti unstuck immediately:
+   Create a one time script file (for example scripts/resetDemoUser.ts) that deletes the user row and related user_roles for a given email, starting with marti@gmail.com.
+   Print clear instructions in the terminal output on how to run it.
+
+B. Logo size needs to be much bigger at the top
+Marti says the logo at the top of the main page is tiny.
+1. Find the header logo usage on the main page she sees after login (likely ClientDashboard and other page headers).
+2. Increase the logo display size substantially (responsive). Example target:
+   container about 80 to 96 px on mobile and 96 to 112 px on desktop
+   image about 64 to 80 px on mobile and 80 to 96 px on desktop
+3. Do this consistently across all page headers that show the brand mark.
+Optional but preferred: create a small reusable component like client/src/components/BrandMark.tsx and replace the repeated markup.
+
+C. Rename Work It everywhere
+1. Update BottomNav label from “Work It” to “Progressive Assignments”.
+2. Update the WorkIt page header title from “Work It” to “Progressive Assignments”.
+3. Make sure the title wraps nicely on mobile if needed.
+
+D. Update Community description copy
+In client/src/pages/ClientDashboard.tsx, replace:
+“Connect with other women in this season of life.”
+with:
+“Celebrate breakthroughs, navigate challenges, and build friendships that last beyond the reset.”
+
+E. Verify what Marti sees
+1. After fixes, verify a new user who signs up with marti@gmail.com can log in successfully.
+2. Verify the header logo is clearly larger.
+3. Verify Work It rename is visible in nav and page.
+4. Verify Community description text is updated.
+Provide a short checklist of what you tested and where.
