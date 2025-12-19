@@ -5,7 +5,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { Sparkles, Heart, Zap, Sun, Star, Play, Phone, Flame, CheckCircle } from "lucide-react";
 import { FIVE_PILLARS, VITALITY_RESET_PROGRAM } from "@/lib/vitality-reset-content";
 
-const brandLogo = "/branding/wellness-escape-logo.png";
+const brandBadge = "/branding/wellness-escape-badge.png";
 
 const PILLAR_ICONS = [Sparkles, Heart, Zap, Sun, Star];
 
@@ -27,9 +27,7 @@ const Landing = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/20 pointer-events-none" />
         <div className="max-w-4xl mx-auto text-center space-y-8 relative">
           <div className="flex justify-center mb-6">
-            <div className="w-32 h-32 bg-primary/10 backdrop-blur-sm rounded-3xl flex items-center justify-center shadow-xl overflow-hidden border border-primary/20">
-              <img src={brandLogo} alt="Wellness Escape" className="w-24 h-24 object-contain" />
-            </div>
+            <img src={brandBadge} alt="Wellness Escape" className="w-40 h-40 sm:w-48 sm:h-48 object-contain drop-shadow-lg" />
           </div>
 
           <div className="space-y-4">
