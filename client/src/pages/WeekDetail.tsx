@@ -38,9 +38,7 @@ const WeekDetail = () => {
       <div className="page-container ocean-gradient">
         <header className="page-header">
           <div className="container mx-auto px-4 py-4 flex items-center gap-4">
-            <div className="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center shadow-sm overflow-hidden">
-              <img src="/branding/wellness-escape-logo.png" alt="" className="w-10 h-10 object-contain" />
-            </div>
+            <img src="/branding/wellness-escape-badge.png" alt="" className="w-14 h-14 object-contain drop-shadow-sm" />
             <Button variant="ghost" size="sm" onClick={() => setLocation("/app")}>
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to program
@@ -84,9 +82,7 @@ const WeekDetail = () => {
     <div className="page-container ocean-gradient">
       <header className="page-header">
         <div className="container mx-auto px-4 py-4 flex items-center gap-4">
-          <div className="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center shadow-sm overflow-hidden">
-            <img src="/branding/wellness-escape-logo.png" alt="" className="w-10 h-10 object-contain" />
-          </div>
+          <img src="/branding/wellness-escape-badge.png" alt="" className="w-14 h-14 object-contain drop-shadow-sm" />
           <Button
             variant="ghost"
             size="sm"

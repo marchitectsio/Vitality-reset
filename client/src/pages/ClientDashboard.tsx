@@ -58,9 +58,7 @@ const ClientDashboard = () => {
       <header className="page-header">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center shadow-md overflow-hidden">
-              <img src="/branding/wellness-escape-logo.png" alt="" className="w-16 h-16 sm:w-20 sm:h-20 object-contain" />
-            </div>
+            <img src="/branding/wellness-escape-badge.png" alt="" className="w-20 h-20 sm:w-24 sm:h-24 object-contain drop-shadow-md" />
             <div>
               <p className="text-xs uppercase tracking-wide text-muted-foreground">
                 Wellness Escape

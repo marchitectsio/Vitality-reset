@@ -83,9 +83,7 @@ export default function Purchase() {
     <div className="min-h-screen ocean-gradient-hero flex items-center justify-center p-4 sm:p-6">
       <div className="w-full max-w-2xl space-y-6">
         <div className="text-center space-y-4">
-          <div className="mx-auto w-24 h-24 rounded-3xl bg-primary/10 border border-primary/20 flex items-center justify-center shadow-lg overflow-hidden">
-            <img src="/branding/wellness-escape-logo.png" alt="Wellness Escape" className="w-16 h-16 object-contain" />
-          </div>
+          <img src="/branding/wellness-escape-badge.png" alt="Wellness Escape" className="mx-auto w-28 h-28 object-contain drop-shadow-lg" />
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
               <Lock className="w-3.5 h-3.5" />

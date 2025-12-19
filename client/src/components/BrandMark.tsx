@@ -24,13 +24,11 @@ export function BrandMark({ size = 'md', showText = false, className = '' }: Bra
   
   return (
     <div className={`flex items-center gap-3 ${className}`}>
-      <div className={`${sizeClasses.container} rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center shadow-md overflow-hidden`}>
-        <img 
-          src="/branding/wellness-escape-logo.png" 
-          alt="Wellness Escape" 
-          className={`${sizeClasses.image} object-contain`}
-        />
-      </div>
+      <img 
+        src="/branding/wellness-escape-badge.png" 
+        alt="Wellness Escape" 
+        className={`${sizeClasses.container} object-contain drop-shadow-md`}
+      />
       {showText && (
         <div>
           <p className="text-xs uppercase tracking-wide text-muted-foreground">

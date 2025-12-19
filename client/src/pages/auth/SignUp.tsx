@@ -8,7 +8,7 @@ import { Link } from 'wouter';
 import { toast } from 'sonner';
 import { handleAuthError } from '@/lib/errorHandling';
 import { signUpSchema } from '@/lib/validations';
-const brandLogo = "/branding/wellness-escape-logo.png";
+const brandBadge = "/branding/wellness-escape-badge.png";
 
 const SignUp = () => {
   const [name, setName] = useState('');
@@ -52,9 +52,7 @@ const SignUp = () => {
       <Card className="w-full max-w-md glass-card">
         <CardHeader className="space-y-4 text-center">
           <div className="flex justify-center">
-            <div className="w-16 h-16 bg-primary/15 rounded-full flex items-center justify-center overflow-hidden border border-primary/20">
-              <img src={brandLogo} alt="Wellness Escape" className="w-12 h-12 object-contain" />
-            </div>
+            <img src={brandBadge} alt="Wellness Escape" className="w-24 h-24 object-contain drop-shadow-md" />
           </div>
           <CardTitle className="text-2xl">Begin Your Journey</CardTitle>
           <CardDescription>Create your account to get started</CardDescription>
