@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClientProvider } from "@tanstack/react-query";
-import { Switch, Route } from "wouter";
+import { Router as WouterRouter, Switch, Route } from "wouter";
 import { AuthProvider } from "@/hooks/useAuth";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { queryClient } from "@/lib/queryClient";
@@ -15,21 +15,20 @@ import ClientDashboard from "./pages/ClientDashboard";
 import ProgramView from "./pages/ProgramView";
 import WeekDetail from "./pages/WeekDetail";
 import SessionDetail from "./pages/SessionDetail";
-import Journal from "./pages/Journal";
-import Community from "./pages/Community";
-import Profile from "./pages/Profile";
 import AdminDashboard from "./pages/AdminDashboard";
-import AdminUpdateSessions from "@/pages/AdminUpdateSessions";
-import HowItWorks from "./pages/HowItWorks";
+import AdminUpdateSessions from "./pages/AdminUpdateSessions";
 import NotFound from "./pages/NotFound";
-import PublicSessionDetail from "./pages/PublicSessionDetail";
 import Purchase from "./pages/Purchase";
 import Welcome from "./pages/Welcome";
 import Habits from "./pages/Habits";
 import Schedule from "./pages/Schedule";
 import WorkIt from "./pages/WorkIt";
+import Community from "./pages/Community";
+import HowItWorks from "./pages/HowItWorks";
+import Profile from "./pages/Profile";
+import PublicSessionDetail from "./pages/PublicSessionDetail";
 
-function Router() {
+function AppRoutes() {
   return (
     <Switch>
       <Route path="/" component={Index} />
@@ -38,6 +37,16 @@ function Router() {
       <Route path="/auth/forgot-password" component={ForgotPassword} />
       <Route path="/auth/reset-password" component={ResetPassword} />
       <Route path="/share/sessions/:sessionId" component={PublicSessionDetail} />
+
+      <Route path="/program">
+        <ProtectedRoute><ProgramView /></ProtectedRoute>
+      </Route>
+      <Route path="/week/:weekId">
+        <ProtectedRoute requireAccess><WeekDetail /></ProtectedRoute>
+      </Route>
+      <Route path="/session/:sessionId">
+        <ProtectedRoute requireAccess><SessionDetail /></ProtectedRoute>
+      </Route>
       <Route path="/purchase">
         <ProtectedRoute><Purchase /></ProtectedRoute>
       </Route>
@@ -53,21 +62,6 @@ function Router() {
       <Route path="/work-it">
         <ProtectedRoute><WorkIt /></ProtectedRoute>
       </Route>
-      <Route path="/app">
-        <ProtectedRoute><ClientDashboard /></ProtectedRoute>
-      </Route>
-      <Route path="/programs/:programId">
-        {(params) => <ProtectedRoute><ProgramView /></ProtectedRoute>}
-      </Route>
-      <Route path="/programs/:programId/weeks/:weekId">
-        {(params) => <ProtectedRoute requireAccess><WeekDetail /></ProtectedRoute>}
-      </Route>
-      <Route path="/sessions/:sessionId">
-        {(params) => <ProtectedRoute requireAccess><SessionDetail /></ProtectedRoute>}
-      </Route>
-      <Route path="/journal">
-        <ProtectedRoute><Journal /></ProtectedRoute>
-      </Route>
       <Route path="/community">
         <ProtectedRoute><Community /></ProtectedRoute>
       </Route>
@@ -77,16 +71,27 @@ function Router() {
       <Route path="/profile">
         <ProtectedRoute><Profile /></ProtectedRoute>
       </Route>
+      <Route path="/app">
+        <ProtectedRoute><ClientDashboard /></ProtectedRoute>
+      </Route>
+
       <Route path="/admin">
         <ProtectedRoute requireAdmin><AdminDashboard /></ProtectedRoute>
       </Route>
       <Route path="/admin-update-sessions">
         <ProtectedRoute requireAdmin><AdminUpdateSessions /></ProtectedRoute>
       </Route>
+
       <Route component={NotFound} />
     </Switch>
   );
 }
+
+const routerBase = (() => {
+  const base = import.meta.env.BASE_URL || "/";
+  if (base === "/") return "";
+  return base.endsWith("/") ? base.slice(0, -1) : base;
+})();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -94,7 +99,9 @@ const App = () => (
       <Toaster />
       <Sonner />
       <AuthProvider>
-        <Router />
+        <WouterRouter base={routerBase}>
+          <AppRoutes />
+        </WouterRouter>
       </AuthProvider>
     </TooltipProvider>
   </QueryClientProvider>
