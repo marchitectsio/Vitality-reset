@@ -261,7 +261,7 @@ const ClientDashboard = () => {
         </div>
 
         <div className="grid gap-4 md:grid-cols-2">
-          <Link href="/journal">
+          <Link href="/work-it">
             <Card className="glass-card premium-card-hover h-full">
               <CardHeader>
                 <CardTitle className="flex items-center text-lg gap-2">
