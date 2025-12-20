@@ -185,7 +185,7 @@ export const VITALITY_RESET_WEEKS: WeekContent[] = [
       {
         id: "2",
         title: "Nutrition & Hydration Basics",
-        subtitle: "Fuel that works for women over 40",
+        subtitle: "Smart Sustainable Strategies",
         description:
           "We're diving into nutrition basics - breakfast, lunch, and dinner. Not diet rules, but strategies that work WITH your body, specifically after 40. We'll talk about hydration and how something as simple as water can change your energy, your hunger cues, and your recovery.",
         durationMinutes: 18,
@@ -283,19 +283,19 @@ export const VITALITY_RESET_WEEKS: WeekContent[] = [
     sessions: [
       {
         id: "5",
-        title: "Stress and Your Nervous System",
-        subtitle: "Understanding your body's signals",
+        title: "Sleep and Stress Management",
+        subtitle: "Recovery is where transformation begins",
         description:
-          "Recognize how stress shows up in your body and learn how to interrupt stress patterns. Your nervous system holds the key to sustainable energy and wellness.",
+          "Learn how stress shows up in your body and how to calm your system on demand. Your nervous system holds the key to sustainable energy and wellness.",
         durationMinutes: 24,
         videoUrl: "https://youtu.be/G0zt6uGkj_U",
         journalPrompt: "Where does stress live in your body right now?",
         progressionAssignments: [
           {
             id: "5-1",
-            title: "Stress Pattern Awareness",
+            title: "Sleep Optimization Plan",
             description:
-              "Become aware of how and when stress shows up for you.",
+              "Create your personalized sleep optimization strategy.",
             steps: [
               "Track stress triggers for 3 days",
               "Note physical sensations when stressed (tight shoulders, headache, etc.)",
@@ -304,14 +304,25 @@ export const VITALITY_RESET_WEEKS: WeekContent[] = [
             estimatedMinutes: 10,
             bringToCall: ["Your stress pattern observations"],
           },
+          {
+            id: "5-2",
+            title: "Recovery Reflection",
+            description:
+              "Reflect on your recovery needs and patterns.",
+            steps: [
+              "Note how you feel after different recovery activities",
+              "Identify what helps you recharge most effectively",
+            ],
+            estimatedMinutes: 10,
+          },
         ],
       },
       {
         id: "6",
-        title: "Sleep and Evening Reset",
+        title: "Refining Sleep Strategy",
         subtitle: "Reclaiming restorative rest",
         description:
-          "Sleep is when your body heals and resets. We'll create an evening routine that signals your body it's time to wind down and prepare for truly restorative sleep.",
+          "Sleep is when your body heals and resets. We'll refine your sleep strategy and create an evening routine that signals your body it's time to wind down.",
         durationMinutes: 19,
         videoUrl: "https://youtu.be/xEVqXOFucEU",
         journalPrompt:
@@ -345,17 +356,29 @@ export const VITALITY_RESET_WEEKS: WeekContent[] = [
     sessions: [
       {
         id: "7",
-        title: "Weekend and Travel Strategy",
-        subtitle: "Maintaining momentum through disruption",
+        title: "Stepping into your POWER",
+        subtitle: "Integration. Bringing everything together. This is about stepping fully into your POWER.",
         description:
-          "Life doesn't pause for wellness. Learn strategies to stay on track during weekends, travel, holidays, and those inevitable disruptions that used to derail you.",
+          "This week is about integration. Bringing everything together. This is about stepping fully into your POWER and protecting your changes with realistic plans.",
         durationMinutes: 21,
         videoUrl: "https://youtu.be/2cypY8C67cA",
-        journalPrompt: "Where do weekends usually go off the rails for you?",
+        journalPrompt: "What does Radiate mean to you? How will you step into your power?",
         progressionAssignments: [
           {
             id: "7-1",
-            title: "Disruption Proof Plan",
+            title: "What Radiate means to me",
+            description:
+              "Define what radiating confidence and wellness looks like for you.",
+            steps: [
+              "Write what 'Radiate' means in your life",
+              "Identify how you want to show up for yourself and others",
+              "Describe the version of you who has fully integrated these changes",
+            ],
+            estimatedMinutes: 15,
+          },
+          {
+            id: "7-2",
+            title: "Obstacle proofing your Plan",
             description:
               "Create your strategy for staying on track during life's disruptions.",
             steps: [
@@ -369,10 +392,10 @@ export const VITALITY_RESET_WEEKS: WeekContent[] = [
       },
       {
         id: "8",
-        title: "Integration and Your Next 90 Days",
-        subtitle: "Locking in your transformation",
+        title: "Transformation Celebration",
+        subtitle: "Your Next 90 Days",
         description:
-          "This is about locking in a sustainable rhythm that you can carry forward. We'll create your vision for the next 90 days and identify the habits that will become your new normal.",
+          "Celebrate your transformation and lock in a sustainable rhythm. We'll create your vision for the next 90 days and identify the habits that will become your new normal.",
         durationMinutes: 23,
         videoUrl: "https://youtu.be/wJlypFkxCFk",
         journalPrompt:
@@ -380,9 +403,9 @@ export const VITALITY_RESET_WEEKS: WeekContent[] = [
         progressionAssignments: [
           {
             id: "8-1",
-            title: "Your 90 Day Vision",
+            title: "Build your Personalized Wellness Plan",
             description:
-              "Project forward and lock in your sustainable rhythm.",
+              "Create your sustainable wellness plan for the next 90 days.",
             steps: [
               "Write your 90 day wellness vision",
               "List the 3 to 5 habits you're committing to long term",

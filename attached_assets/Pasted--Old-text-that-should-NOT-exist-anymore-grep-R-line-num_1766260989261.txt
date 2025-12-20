@@ -1,0 +1,30 @@
+# Old text that should NOT exist anymore
+grep -R --line-number --fixed-strings "Your journey in Mindful Wellness begins" client/src || true
+grep -R --line-number --fixed-strings "Nutrition & Hydration Fundamentals" client/src || true
+grep -R --line-number --fixed-strings "Fuel that works for women over 40" client/src || true
+grep -R --line-number --fixed-strings "Hydration goal: working to 90 oz" client/src || true
+grep -R --line-number --fixed-strings "Stress and Your Nervous System" client/src || true
+grep -R --line-number --fixed-strings "Sleep and Evening Reset" client/src || true
+grep -R --line-number --fixed-strings "Weekend and Travel Strategy" client/src || true
+grep -R --line-number --fixed-strings "Disruption proof plan" client/src || true
+grep -R --line-number --fixed-strings "Locking in your transformation" client/src || true
+grep -R --line-number --fixed-strings "Progressions Assignments" client/src || true
+
+# New text that SHOULD exist
+grep -R --line-number --fixed-strings "Transform your Health in just 4 weeks" client/src || true
+grep -R --line-number --fixed-strings "Nutrition & Hydration Basics" client/src || true
+grep -R --line-number --fixed-strings "Smart Sustainable Strategies" client/src || true
+grep -R --line-number --fixed-strings "Reflection and Weekend Strategy" client/src || true
+grep -R --line-number --fixed-strings "Sleep and Stress Management" client/src || true
+grep -R --line-number --fixed-strings "Recovery is where transformation begins" client/src || true
+grep -R --line-number --fixed-strings "Sleep Optimization Plan" client/src || true
+grep -R --line-number --fixed-strings "Recovery Reflection" client/src || true
+grep -R --line-number --fixed-strings "Refining Sleep Strategy" client/src || true
+grep -R --line-number --fixed-strings "Integration. Bringing everything together. This is about stepping fully into your POWER." client/src || true
+grep -R --line-number --fixed-strings "Stepping into your POWER" client/src || true
+grep -R --line-number --fixed-strings "What Radiate means to me" client/src || true
+grep -R --line-number --fixed-strings "Build your Personalized Wellness Plan" client/src || true
+grep -R --line-number --fixed-strings "Transformation Celebration" client/src || true
+grep -R --line-number --fixed-strings "Wins" client/src || true
+grep -R --line-number --fixed-strings "Obstacle proofing your Plan" client/src || true
+grep -R --line-number --fixed-strings "Movement demos coming soon (video or photo guidance)." client/src || true
