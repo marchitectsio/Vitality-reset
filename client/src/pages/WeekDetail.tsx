@@ -200,7 +200,7 @@ const WeekDetail = () => {
                       className="shrink-0"
                       data-testid={`button-start-session-${session.id}`}
                     >
-                      <Link href={`/sessions/${session.id}`}>
+                      <Link href={`/session/${session.id}`}>
                         <Play className="w-3 h-3 mr-1" />
                         Start
                       </Link>
