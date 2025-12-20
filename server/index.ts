@@ -2,6 +2,36 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { stripeWebhookHandler } from "./billing";
 import { setupVite, serveStatic, log } from "./vite";
+import { storage } from "./storage";
+import bcrypt from "bcrypt";
+
+async function seedAdminUser() {
+  try {
+    const adminEmail = "marti@gmail.com";
+    const adminPassword = process.env.ADMIN_PASSWORD;
+    const adminName = "Marti Shaw";
+    
+    if (!adminPassword) {
+      log("ADMIN_PASSWORD not set, skipping admin user seed");
+      return;
+    }
+    
+    const existingUser = await storage.getUserByEmail(adminEmail);
+    if (!existingUser) {
+      const hashedPassword = await bcrypt.hash(adminPassword, 10);
+      await storage.createUser({
+        email: adminEmail,
+        password: hashedPassword,
+        name: adminName,
+      });
+      log(`Admin user created: ${adminEmail}`);
+    } else {
+      log(`Admin user already exists: ${adminEmail}`);
+    }
+  } catch (error) {
+    log(`Admin seeding skipped or failed: ${error}`);
+  }
+}
 
 const app = express();
 
@@ -42,6 +72,7 @@ app.use((req, res, next) => {
 });
 
 (async () => {
+  await seedAdminUser();
   const server = await registerRoutes(app);
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
