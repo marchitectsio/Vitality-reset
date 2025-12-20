@@ -304,23 +304,12 @@ export const VITALITY_RESET_WEEKS: WeekContent[] = [
             estimatedMinutes: 10,
             bringToCall: ["Your stress pattern observations"],
           },
-          {
-            id: "5-2",
-            title: "Recovery Reflection",
-            description:
-              "Reflect on your recovery needs and patterns.",
-            steps: [
-              "Note how you feel after different recovery activities",
-              "Identify what helps you recharge most effectively",
-            ],
-            estimatedMinutes: 10,
-          },
         ],
       },
       {
         id: "6",
         title: "Recovery Reflection",
-        subtitle: "Reclaiming restorative rest",
+        subtitle: "Sleep and Evening Reset",
         description:
           "Sleep is when your body heals and resets. We'll refine your sleep strategy and create an evening routine that signals your body it's time to wind down.",
         durationMinutes: 19,
@@ -366,18 +355,6 @@ export const VITALITY_RESET_WEEKS: WeekContent[] = [
         progressionAssignments: [
           {
             id: "7-1",
-            title: "What Radiate means to me",
-            description:
-              "Define what radiating confidence and wellness looks like for you.",
-            steps: [
-              "Write what 'Radiate' means in your life",
-              "Identify how you want to show up for yourself and others",
-              "Describe the version of you who has fully integrated these changes",
-            ],
-            estimatedMinutes: 15,
-          },
-          {
-            id: "7-2",
             title: "Build your Personalized Wellness Plan",
             description:
               "Create your sustainable wellness plan moving forward.",
