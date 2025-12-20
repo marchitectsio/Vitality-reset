@@ -37,11 +37,11 @@ export function BottomNav() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`bottom-nav-item ${active ? "bottom-nav-item-active" : "bottom-nav-item-inactive"}`}
+                className={`bottom-nav-item flex flex-col items-center justify-center ${active ? "bottom-nav-item-active" : "bottom-nav-item-inactive"}`}
                 aria-current={active ? "page" : undefined}
               >
                 <Icon className={`h-5 w-5 ${active ? "text-primary" : ""}`} />
-                <span className="leading-none text-[10px] sm:text-xs">{item.label}</span>
+                <span className="leading-none text-[10px] sm:text-xs text-center">{item.label}</span>
               </Link>
             );
           })}
