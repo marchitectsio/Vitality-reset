@@ -357,7 +357,7 @@ export const VITALITY_RESET_WEEKS: WeekContent[] = [
       {
         id: "7",
         title: "Stepping into your POWER",
-        subtitle: "Integration. Bringing everything together. This is about stepping fully into your POWER.",
+        subtitle: "What Radiate means to me",
         description:
           "This week is about integration. Bringing everything together. This is about stepping fully into your POWER and protecting your changes with realistic plans.",
         durationMinutes: 21,
