@@ -393,7 +393,7 @@ export const VITALITY_RESET_WEEKS: WeekContent[] = [
       {
         id: "8",
         title: "Transformation Celebration",
-        subtitle: "Your Next 90 Days",
+        subtitle: "Wins",
         description:
           "Celebrate your transformation and lock in a sustainable rhythm. We'll create your vision for the next 90 days and identify the habits that will become your new normal.",
         durationMinutes: 23,
