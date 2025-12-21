@@ -64,7 +64,7 @@ export const WORK_IT_WEEKS: WorkItWeek[] = [
       "Set a consistent bedtime for 5 nights",
       "Try one stress relief technique from the lesson",
     ],
-    reflectionPrompt: "What is exciting to you about creating a Wind Down routine?",
+    reflectionPrompt: "What is exciting to you about creating a Wind-Down Routine?",
     journalPrompts: [
       "How has my sleep changed from the beginning of the week to now?",
       "What stress management practice helped me the most? Why?",
